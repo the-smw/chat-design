@@ -6,8 +6,14 @@
 
 
 /* Single margin direction declaration */
-.user {
+
+header, p,
+.user, .add-new-button {
   margin-bottom: 1rem;
+}
+
+.chat-body, .typing {
+    background-color: #F4F3F5;
 }
 
 body {
@@ -17,12 +23,21 @@ body {
   background-color: #FFFFFF;
 }
 
-header {
+header, .chat-header {
   width: 100%;
   background-color: #6200EA;
   padding: .5rem;
-  text-align: center;
   display: table;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 input {
@@ -40,7 +55,27 @@ h3 {
 
 h3, .info {
   display: inline-block;
-  width: 75%;
+  width: 70%;
+}
+
+h1, h2, .logo, .header-avatar {
+  display: inline-block;
+}
+
+h1 {
+  float: left;
+}
+
+h2 {
+  float: right;
+}
+
+.message {
+  display: inline-block;
+  border-radius: 0px 10px 10px 10px;
+  margin-left: .3rem;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
 
@@ -62,13 +97,108 @@ h3, .info {
 .user {
   display: table;
   width: 100%;
-  margin: 0 auto;
+  margin-left: .5rem;
   padding: .5rem;
+}
+
+.amy {
+  border-left: 3px solid #6200EA;
 }
 
 .user:last-child {
   margin-bottom: 1.5rem;
 }
+
+
+
+/*====CHAT LAYOUT====*/
+
+.amy-msg {
+  width: 90%;
+  margin-left: 1rem;
+}
+
+.pic {
+  width: 20%;
+}
+
+.text {
+  width: 70%;
+}
+
+.first {
+  padding-top: 2rem;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.student {
+  margin-right: .3rem;
+  border-radius: 10px 0px 10px 10px;
+  background-color: #B2ACBA;
+  color: #ffffff;
+}
+
+.last {
+  margin-bottom: 2rem;
+}
+
+.typing {
+  padding-left: 1rem;
+}
+
+.chat-body::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.typing::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.input-msg-panel {
+  position: relative;
+  width: 100%;
+}
+
+form {
+  width: 80%;
+  float: left;
+}
+
+.enter-your-message {
+  position: relative;
+}
+
+form i  {
+  position: absolute;
+  right: 0;
+  top: 1.6rem;
+}
+
+.fas {
+  right: 1.5rem;
+}
+
+#send {
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+  background-color: #6200EA;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: .5rem;
+}
+
 
 /* Images */
 
@@ -82,20 +212,56 @@ h3, .info {
   float: left;
 }
 
+.header-avatar {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo {
+  display: none;
+}
+.fa {
+  
+}
+
 
 
 /*====TYPOGRYPHY====*/
 
-#search {
+#input-search, .your-msg, form i {
   font-weight: 800;
   opacity: .50;
   letter-spacing: .13rem;
+  font-family: 'Montserrat', 'FontAwesome', sans-serif;
 }
 
-h3, .info {
+
+h1, h2 {
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding-left: .3rem;
+}
+
+h2 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: .3rem
+}
+
+h3, .info, .message, .tagline {
   font-size: .8rem;
   line-height: 1.2;
   letter-spacing: .0325rem;
+}
+
+h3, .info {
   text-align: justify;
 }
 
@@ -103,6 +269,15 @@ h3 {
   font-weight: 800;
   text-transform: uppercase;
   color: #6200EA;
+}
+
+.tagline {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #B2ACBA;
+  margin-left: .3rem;
+  margin-right: .3rem;
 }
 
 
@@ -124,4 +299,11 @@ h3 {
   border-radius: 24px;
   text-transform: uppercase;
   margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+form a {
+  text-decoration: none;
+  color: #211138;
+  opacity: .50;
 }
