@@ -59,14 +59,16 @@
         <p class="info">Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
       </div>
     </div>
+    <a class="add-new-button" href="#">Add new contact</a>
   </div>
-  <a class="add-new-button" href="#">Add new contact</a>
   <div class="chat-panel">
     <div class="chat-header">
       <div class="wrapper">
         <h1>Amy Adams</h1>
       </div>
-      <img class="logo" src="assets/logo_50.svg" alt="logo">
+      <div class="logo-wrapper">
+        <img class="logo" src="assets/logo_50.svg" alt="logo">
+      </div>
       <div class="wrapper">
         <h2>Student name</h2>
       </div>
@@ -89,9 +91,9 @@
         <div class="pic right">
           <img class="avatar" src="assets/user_avatar_07.png" alt="student">
         </div>
-        <div class="text right">
+        <div class="text right student-text">
           <p class="tagline right">11:40</p>
-          <p class="message student last">Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <p class="message student last right-msg">Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
       <div class="amy-msg">
@@ -107,25 +109,25 @@
         <div class="pic right">
           <img class="avatar" src="assets/user_avatar_07.png" alt="student">
         </div>
-        <div class="text right">
-          <p class="tagline right">12:06</p>
-          <p class="message student">At vero eos et accusam et justo duo dolores et ea rebum.</p><br>
-          <p class="message student last">Stet clita kasd gubergren.</p>
+        <div class="text right student-text">
+          <p class="tagline right last-tag">12:06</p>
+          <p class="message student right-msg short">At vero eos et accusam et justo duo dolores et ea rebum.</p><br>
+          <p class="message student last right-msg">Stet clita kasd gubergren.</p>
         </div>
       </div>
-    </div>
-    <div class="typing">
+      <div class="typing">
       <p class="tagline left last">amy is typing...</p>
+      </div>
     </div>
     <div class="input-msg-panel">
       <form id="enter-text-form">
         <div class="enter-your-message">
           <input class="your-msg" name="your-msg" type="text" placeholder="Type your message...">
-          <a href="#"><i class="fas fa-paperclip"></i></a>
+          <a href="#"><i id="attach-file" class="fas fa-paperclip"></i></a>
           <a href="#"><i class="far fa-smile"></i></a>
        </div>
       </form>
-      <a href="#"><i id="send" class="fas fa-paper-plane"></i></a>
+      <a class="send-msg" href="#"><i id="send" class="fas fa-paper-plane"></i></a>
     </div>
   </div>
 

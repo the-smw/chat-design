@@ -31,14 +31,23 @@ header, .chat-header {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .chat-header {
+    width: 100%;
+    height: 8vh;
+  }
+}
+
 header {
   text-align: center;
 }
 
-.wrapper {
-  display: table-cell;
-  vertical-align: middle;
+@media (min-width: 1200px) {
+  header {
+    display: none;
+  }
 }
+
 
 input {
   display: inline-block;
@@ -47,6 +56,12 @@ input {
   padding: .7rem;
   margin: 1rem;
   border: none;
+}
+
+@media (min-width: 1200px) {
+  #input-search {
+    width: 90%;
+  }
 }
 
 h3 {
@@ -70,6 +85,13 @@ h2 {
   float: right;
 }
 
+@media (min-width: 1200px) {
+  h2 {
+    letter-spacing: .2rem;
+    margin-right: -20%;
+  }
+}
+
 .message {
   display: inline-block;
   border-radius: 0px 10px 10px 10px;
@@ -81,12 +103,29 @@ h2 {
 
 /* Container styles */
 
-.wrapper {
+.wrapper, .logo-wrapper {
   display: table-cell;
+  vertical-align: middle;
 }
 
 .contacts-panel {
   width: 90%;
+}
+
+@media (min-width: 1200px) {
+  .contacts-panel {
+    width: 25%;
+    height: 100vh;
+    float: left;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .chat-panel {
+    width: 75%;
+    height: 100vh;
+    float: left;
+  }
 }
 
 .content {
@@ -101,8 +140,18 @@ h2 {
   padding: .5rem;
 }
 
+@media (min-width: 1200px) {
+  .user {
+    padding: .2rem;
+    margin-bottom: 0;
+  }
+  .amy {
+    margin-bottom: .3rem;
+  }
+}
+
 .amy {
-  border-left: 3px solid #6200EA;
+  border-left: 5px solid #6200EA;
 }
 
 .user:last-child {
@@ -112,6 +161,13 @@ h2 {
 
 
 /*====CHAT LAYOUT====*/
+
+@media (min-width: 1200px) {
+  .chat-body {
+    height: 75vh;
+    position: relative;
+  }
+}
 
 .amy-msg {
   width: 90%;
@@ -125,6 +181,54 @@ h2 {
 .text {
   width: 70%;
 }
+
+@media (min-width: 1200px) {
+    .amy-msg {
+      width: 70%;
+      margin-bottom: 1rem;
+      margin-left: 3rem;
+      float: left;
+    }
+    
+    .pic {
+      width: 7%;
+    }
+  
+    .amy-msg::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .student-msg {
+      width: 60%;
+      float: right;
+      margin-right: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .last-tag {
+      width: 100%;
+      text-align: right;
+    }
+    
+    .right-msg {
+      float: right;
+    }
+    
+    .short {
+      width: 70%;
+      float: right;
+    }
+    
+    .student-msg::after {
+      content: "";
+      clear: both;
+      display: block;
+    }    
+  }
 
 .first {
   padding-top: 2rem;
@@ -145,12 +249,20 @@ h2 {
   color: #ffffff;
 }
 
-.last {
-  margin-bottom: 2rem;
-}
+
 
 .typing {
   padding-left: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .typing {
+    width: 100%;
+    float: left;
+    padding-left: 2rem;
+    position: absolute;
+    top: 73vh;
+  }
 }
 
 .chat-body::after {
@@ -170,9 +282,25 @@ h2 {
   width: 100%;
 }
 
+@media (min-width: 1200px) {
+  .input-msg-panel {
+    margin-top: 1rem;
+  }
+  
+  .your-msg {
+    padding-bottom: 8vh;
+  }
+} 
+
 form {
   width: 80%;
   float: left;
+}
+
+@media (min-width: 1200px) {
+  form {
+    width: 90%;
+  }
 }
 
 .enter-your-message {
@@ -183,6 +311,20 @@ form i  {
   position: absolute;
   right: 0;
   top: 1.6rem;
+}
+
+@media (min-width: 1200px) {
+  form i {
+    font-size: 1.5rem; 
+  }
+  
+  form i:hover {
+    transform: scale(1.2);
+  }
+  
+  #attach-file {
+    right: 2.3rem;
+  }
 }
 
 .fas {
@@ -198,6 +340,21 @@ form i  {
   border-radius: 50%;
   padding: .5rem;
 }
+
+@media (min-width: 1200px) {
+  #send {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    right: 4%;
+  }
+  
+  #send:hover {
+    transform: scale(1.2);
+  }
+}
+
 
 
 /* Images */
@@ -219,12 +376,28 @@ form i  {
   border-radius: 50%;
 }
 
+@media (min-width: 1200px) {
+  .header-avatar {
+    float: right;
+    margin-right: 1rem;
+  }
+}
+
 .logo {
   display: none;
 }
-.fa {
+
+@media (min-width: 1200px) {
+  .logo {
+    display: inline; 
+  }
   
+  .logo-wrapper {
+    position: relative;
+    left: 5%;
+  }
 }
+
 
 
 
@@ -280,12 +453,16 @@ h3 {
   margin-right: .3rem;
 }
 
+.message {
+  line-height: 1.3;
+}
 
 
 /*====COMPONENTS====*/
 
 .add-new-button {
   display: block;
+  width: 100%;
   text-decoration: none;
   text-align: center;
   font-size: .7rem;
@@ -300,6 +477,12 @@ h3 {
   text-transform: uppercase;
   margin: 1rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .add-new-button {
+    width: 90%;
+  }
 }
 
 form a {
