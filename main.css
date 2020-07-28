@@ -257,11 +257,11 @@ h2 {
 
 @media (min-width: 1200px) {
   .typing {
-    width: 100%;
+    width: 30%;
     float: left;
     padding-left: 2rem;
     position: absolute;
-    top: 73vh;
+    top: 70vh;
   }
 }
 
