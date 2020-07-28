@@ -123,7 +123,6 @@ h2 {
 @media (min-width: 1200px) {
   .chat-panel {
     width: 75%;
-    height: 100vh;
     float: left;
   }
 }
@@ -164,7 +163,7 @@ h2 {
 
 @media (min-width: 1200px) {
   .chat-body {
-    height: 75vh;
+    height: 90vh;
     position: relative;
   }
 }
@@ -257,11 +256,11 @@ h2 {
 
 @media (min-width: 1200px) {
   .typing {
-    width: 30%;
+    width: 20%;
     float: left;
     padding-left: 2rem;
     position: absolute;
-    top: 70vh;
+    bottom: 2vh;
   }
 }
 
@@ -347,7 +346,7 @@ form i  {
     height: 3rem;
     text-align: center;
     padding-top: 1rem;
-    right: 4%;
+    right: 3%;
   }
   
   #send:hover {
